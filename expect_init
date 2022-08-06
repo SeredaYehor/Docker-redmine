@@ -1,0 +1,7 @@
+#!/usr/bin/expect -f
+set timeout -1
+spawn load_data
+match_max 100000
+expect "zh-TW"
+send -- "en\r"
+expect eof
